@@ -1,0 +1,21 @@
+<div class="cardContainer">
+  <div class="imageContainer">
+    <img [src]="artists.image" alt="" />
+  </div>
+  <div class="cardContent">
+    <div class="cardTitle">
+      {{ artists.name }}
+    </div>
+    <div class="artistFollowers">{{ artists.followers }} followers</div>
+  </div>
+  <div class="rating">
+    <div *ngFor="let i of ' '.repeat(artists.popularity).split('')">
+      <i class="material-icons md-gray">star</i>
+    </div>
+    <div
+      *ngFor="let i of ' '.repeat(maxStarsNum - artists.popularity).split('')"
+    >
+      <i class="material-icons">star_border</i>
+    </div>
+  </div>
+</div>

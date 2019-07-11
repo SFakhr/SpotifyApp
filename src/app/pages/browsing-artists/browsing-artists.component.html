@@ -1,0 +1,20 @@
+<div class="browsingArtistContainer">
+  <div class="searchContainer">
+    <div class="searchComponent">
+      <app-search
+        [defaultData]="defaultData"
+        [Artists]="Artist"
+        (searchChangeValue)="artistChanged($event)"
+        (selectedArtist)="artistSelected($event)"
+      ></app-search>
+    </div>
+  </div>
+
+  <div class="listingContainer">
+    <div class="cardContainer" *ngFor="let artist of Artist">
+      <div style="height:300px">
+        <app-card [artists]="artist" (click)="getAlbums(artist)"></app-card>
+      </div>
+    </div>
+  </div>
+</div>

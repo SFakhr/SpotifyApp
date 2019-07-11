@@ -1,0 +1,10 @@
+<div class="search-page-container">
+  <div class="search-button-container">
+    <app-search
+      [defaultData]="defaultData"
+      [Artists]="Artists"
+      (searchChangeValue)="artistChanged($event)"
+      (selectedArtist)="artistSelected($event)"
+    ></app-search>
+  </div>
+</div>

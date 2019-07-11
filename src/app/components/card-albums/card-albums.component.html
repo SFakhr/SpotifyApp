@@ -1,0 +1,22 @@
+<div class="cardContainer">
+  <div class="imageContainer">
+    <img [src]="album.image" alt="" />
+  </div>
+  <div class="cardContent">
+    <div class="albumName">
+      {{ album.name }}
+    </div>
+    <div class="artistsSection">
+      <div id="artistName" *ngFor="let artist of album.artistNames">
+        {{ artist.name }}
+      </div>
+    </div>
+    <div class="artistFollowersSection">
+      <div id="albumName">{{ album.releaseDate }}</div>
+      <div id="totalTracks">{{ album.totalTracks }} tracks</div>
+    </div>
+  </div>
+  <div class="externalURL">
+    <a [href]="album.externalUrls">Preview on Spotify</a>
+  </div>
+</div>

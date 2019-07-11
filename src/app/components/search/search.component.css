@@ -1,0 +1,29 @@
+.searchForm {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+input {
+  border: none;
+  font-size: medium;
+  flex: 0.95;
+  padding-left: 10px;
+}
+
+:focus {
+  outline: transparent auto 0px;
+}
+.iconContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #808080;
+  flex: 0.05;
+}
+
+input::placeholder {
+  text-align: center;
+}

@@ -1,0 +1,19 @@
+<form class="searchForm">
+  <input
+    type="text"
+    [formControl]="control"
+    [matAutocomplete]="auto"
+    placeholder="Search for an artist…"
+  />
+  <mat-autocomplete #auto="matAutocomplete">
+    <mat-option
+      *ngFor="let artist of Artists"
+      (click)="submitArtist(artist.id, artist.name)"
+    >
+      {{ artist.name }}
+    </mat-option>
+  </mat-autocomplete>
+  <div class="iconContainer">
+    <mat-icon>search</mat-icon>
+  </div>
+</form>

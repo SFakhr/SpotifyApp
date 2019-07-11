@@ -1,0 +1,31 @@
+.browsingArtistContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 0 5%;
+}
+.searchContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  padding-left: 2%;
+}
+.searchComponent {
+  width: 40%;
+  height: 40%;
+  border-radius: 10px;
+  border: 1px solid gray;
+  padding: 5px;
+}
+.listingContainer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.cardContainer {
+  width: 250px;
+  height: 350px;
+  padding: 2%;
+}

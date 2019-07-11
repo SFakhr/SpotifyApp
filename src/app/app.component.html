@@ -1,0 +1,15 @@
+<div class="app-container">
+  <div class="navbar-container">
+    <mat-toolbar
+      >Spotify Artist Search
+      <div class="logoutContainer">
+        <button mat-flat-button class="logoutButton" (click)="logout()">
+          LOGOUT
+        </button>
+      </div>
+    </mat-toolbar>
+  </div>
+  <div class="body-container">
+    <router-outlet></router-outlet>
+  </div>
+</div>

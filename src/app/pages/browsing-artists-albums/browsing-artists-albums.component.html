@@ -1,0 +1,19 @@
+<div class="browsingAlbumsContainer">
+  <div class="headerContainer">
+    <div>
+      <div class="artistName">{{ Artist_Name }}</div>
+      <div class="albumCaption">Albums</div>
+    </div>
+  </div>
+  <div *ngIf="noAlbumFound">
+    <h3>There are no albums for this artist</h3>
+  </div>
+
+  <div class="listingContainer">
+    <div class="albumContainer" *ngFor="let album of Albums">
+      <div>
+        <app-card-albums [album]="album"></app-card-albums>
+      </div>
+    </div>
+  </div>
+</div>
