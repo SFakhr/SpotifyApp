@@ -1,11 +1,11 @@
-.search-page-container {
+.search-pageContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: white;
   min-height: 100%;
 }
-.search-button-container {
+.search-buttonContainer {
   width: 40%;
   height: 50px;
   border-radius: 10px;

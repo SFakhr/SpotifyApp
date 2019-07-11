@@ -4,7 +4,7 @@ import { Observable } from "rxjs";
 import { startWith, map } from "rxjs/operators";
 import { SpotifyAPIService } from "src/app/services/spotifyAPI.service";
 import { ActivatedRoute, Router } from "@angular/router";
-import { IArtist } from "src/app/Inetrfaces/IArtist";
+import { IArtist } from "src/app/Interfaces/IArtist";
 import { isNull } from "@angular/compiler/src/output/output_ast";
 import { Placeholder } from "@angular/compiler/src/i18n/i18n_ast";
 import { isUndefined } from "util";
@@ -16,7 +16,7 @@ import { isUndefined } from "util";
 })
 export class SearchComponent implements OnInit {
   @Input("defaultData") defaultData: IArtist;
-  @Input("Artists") Artists: IArtist[];
+  @Input("artistsArray") artistsArray: IArtist[];
   @Output() searchChangeValue = new EventEmitter<string>();
   @Output() selectedArtist = new EventEmitter<IArtist>();
 

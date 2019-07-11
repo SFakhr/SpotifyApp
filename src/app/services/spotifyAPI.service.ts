@@ -39,16 +39,6 @@ export class SpotifyAPIService {
     window.location.replace(url);
   }
 
-  private handleError(errorResponse: HttpErrorResponse) {
-    if (errorResponse.error instanceof ErrorEvent) {
-      console.error("Client side eroor:", errorResponse.error);
-    } else {
-      console.error("Server side eroor:", errorResponse);
-    }
-
-    return throwError("This is a problem with the service.");
-  }
-
   getArtists(artist: string): Observable<any> {
     const url =
       "https://api.spotify.com/v1/search?q=" + artist + "&type=artist";
@@ -87,5 +77,15 @@ export class SpotifyAPIService {
         })
       })
       .pipe(catchError(this.handleError));
+  }
+
+  private handleError(errorResponse: HttpErrorResponse) {
+    if (errorResponse.error instanceof ErrorEvent) {
+      console.error("Client side eroor:", errorResponse.error);
+    } else {
+      console.error("Server side eroor:", errorResponse);
+    }
+
+    return throwError("This is a problem with the service.");
   }
 }

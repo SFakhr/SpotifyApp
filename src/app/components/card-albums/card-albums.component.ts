@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IArtistAlbums } from 'src/app/Inetrfaces/IArtistAlbums';
+import { IArtistAlbums } from 'src/app/Interfaces/IArtistAlbums';
 import { window } from 'rxjs/internal/operators/window';
 
 @Component({

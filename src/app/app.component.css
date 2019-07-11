@@ -1,4 +1,4 @@
-.app-container {
+.appContainer {
   display: flex;
   flex-direction: column;
   max-width: 100vw;
@@ -6,7 +6,7 @@
   flex: 1;
 }
 
-.navbar-container {
+.navbarContainer {
   height: 80px;
   border: 1px solid gray;
 }
@@ -14,18 +14,7 @@ mat-toolbar {
   height: 100%;
   background-color: #c7c7c7;
 }
-.logoutContainer {
-  display: inline-flex;
-  flex: 1;
-  justify-content: flex-end;
-  content: none;
-}
-.logoutButton {
-  display: contents;
-  font-size: 14px;
-  font-weight: bold;
-}
 
-.body-container {
+.bodyContainer {
   flex: 1;
 }

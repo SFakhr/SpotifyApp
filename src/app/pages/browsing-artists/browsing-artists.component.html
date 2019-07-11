@@ -3,7 +3,7 @@
     <div class="searchComponent">
       <app-search
         [defaultData]="defaultData"
-        [Artists]="Artist"
+        [artistsArray]="artistsArray"
         (searchChangeValue)="artistChanged($event)"
         (selectedArtist)="artistSelected($event)"
       ></app-search>
@@ -11,9 +11,9 @@
   </div>
 
   <div class="listingContainer">
-    <div class="cardContainer" *ngFor="let artist of Artist">
+    <div class="cardContainer" *ngFor="let artist of artistsArray">
       <div style="height:300px">
-        <app-card [artists]="artist" (click)="getAlbums(artist)"></app-card>
+        <app-card [artist]="artist" (click)="getAlbums(artist)"></app-card>
       </div>
     </div>
   </div>

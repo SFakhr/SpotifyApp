@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { SpotifyAPIService } from "src/app/services/spotifyAPI.service";
-import { IArtist } from "src/app/Inetrfaces/IArtist";
+import { IArtist } from "src/app/Interfaces/IArtist";
 import { FormControl } from "@angular/forms";
 import { Observable } from "rxjs";
 
@@ -15,7 +15,7 @@ export class SearchPageComponent implements OnInit {
 
   flag: boolean = true;
 
-  Artists: IArtist[];
+  artistsArray: IArtist[];
 
   constructor(
     private userArtist: SpotifyAPIService,
@@ -35,7 +35,7 @@ export class SearchPageComponent implements OnInit {
       searchArtist = "%20";
 
     this.userArtist.getArtists(searchArtist).subscribe(data => {
-      this.Artists = [];
+      this.artistsArray = [];
       let responseData = data.artists.items;
       if (responseData.length > 0) {
         responseData.forEach(element => {
@@ -45,7 +45,7 @@ export class SearchPageComponent implements OnInit {
             id: element.id,
             name: element.name
           };
-          this.Artists.push(artistFields);
+          this.artistsArray.push(artistFields);
         });
       } else {
         return null;
@@ -59,6 +59,7 @@ export class SearchPageComponent implements OnInit {
     });
   }
   artistChanged(artistName: string) {
+    console.log(artistName);
     this.getArtists(artistName);
   }
 }

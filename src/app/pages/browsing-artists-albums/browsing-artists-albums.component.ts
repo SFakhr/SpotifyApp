@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 import { SpotifyAPIService } from "src/app/services/spotifyAPI.service";
-import { IArtistAlbums } from "src/app/Inetrfaces/IArtistAlbums";
+import { IArtistAlbums } from "src/app/Interfaces/IArtistAlbums";
 
 @Component({
   selector: "app-browsing-artists-albums",
@@ -11,8 +11,8 @@ import { IArtistAlbums } from "src/app/Inetrfaces/IArtistAlbums";
 export class BrowsingArtistsAlbumsComponent implements OnInit {
   Artist_ID: string;
   Artist_Name: string;
-  noAlbumFound: boolean = true;
-  Albums: IArtistAlbums[];
+  noAlbumFound: boolean = false;
+  albumArray: IArtistAlbums[];
 
   constructor(
     private route: ActivatedRoute,
@@ -32,7 +32,7 @@ export class BrowsingArtistsAlbumsComponent implements OnInit {
     });
 
     this.artistAlbums.getAlbums(this.Artist_ID).subscribe(data => {
-      this.Albums = [];
+      this.albumArray = [];
       let responseData = data.items;
       if (responseData[0] != null) {
         responseData.forEach(element => {
@@ -49,7 +49,7 @@ export class BrowsingArtistsAlbumsComponent implements OnInit {
             releaseDate: element.release_date,
             artistNames: element.artists
           };
-          this.Albums.push(artistFields);
+          this.albumArray.push(artistFields);
           this.noAlbumFound = false;
         });
       } else {

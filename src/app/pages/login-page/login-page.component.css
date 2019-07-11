@@ -1,18 +1,18 @@
-.login-page-container {
+.loginPageContainer {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: white;
   min-height: 100%;
 }
-.login-button-container {
+.loginButtonContainer {
   padding: 1%;
   border: 1px solid gray;
   display: flex;
   width: 30%;
   border-radius: 5px;
 }
-.title-container {
+.titleContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +20,7 @@
   font-size: large;
   color: #333333;
 }
-.image-container {
+.imageContainer {
   display: flex;
   justify-content: center;
   align-items: center;
